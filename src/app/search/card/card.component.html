@@ -1,0 +1,14 @@
+<div class="container box-card">
+    <div class="row">
+        <div *ngFor="let item of allPeople" class="card-people col-4 mt-4">
+            <a class="card-link" [routerLink]="['/detail/'+ item.id]">
+                <img class=" card-img-top img-fluid " src="{{item.photo}} ">
+                <div class="card-body card-people-description ">
+                    <p class="card-text card-name ">{{item.name}}</p>
+                    <p class="card-text card-fecha ">{{item.birthdate}}</p>
+                    <span class="card-text card-categoria ">{{item.job}}</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

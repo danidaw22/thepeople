@@ -1,0 +1,41 @@
+@import "../../styles.scss";
+span.destacado {
+    color: $colorAmarillo;
+    font-weight: bold;
+}
+
+.tituloportada {
+    h2 {
+        margin-top: 80px;
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+}
+
+#botonBusqueda {
+    position: absolute;
+    top: 420px;
+    width: 500px;
+    padding: 20px;
+    border-radius: 19px;
+    background-color: #fff;
+}
+
+input.mibuscador {
+    border: 0px;
+    outline: none;
+}
+
+.btn-busqueda {
+    border-radius: 10px;
+    &:hover {
+        color: #000;
+        background-color: rgb(219, 168, 27);
+    }
+}
+
+.imgportada {
+    border-radius: 29px;
+    width: 100%;
+}

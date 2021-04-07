@@ -1,0 +1,18 @@
+<div class="container">
+    <div *ngFor="let item of people" class="box-people">
+        <h2>{{item.nombre}}</h2>
+        <img src="assets/images/{{item.image}}">
+        <div class="box-fecha">
+            <p class="cabecera">FECHA DE NACIMIENTO</p>
+            <p class="text-b">{{item.fecha}}</p>
+        </div>
+        <div class="box-profesion">
+            <p class="cabecera">PROFESIÓN</p>
+            <p class="text-b">{{item.categoria}}</p>
+        </div>
+        <div class="box-bio">
+            <p class="cabecera">BIO</p>
+            <p class="text-b">{{item.bio}}</p>
+        </div>
+    </div>
+</div>
