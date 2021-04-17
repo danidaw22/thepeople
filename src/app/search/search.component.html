@@ -1,24 +1,22 @@
 <div class="container">
-    <div class="box-search row">
-        <div class="col-3"></div>
-        <div class="col-3">
+    <div class="box-search row justify-content-center">
+
+        <div class="col-4">
             <label class="subtitulo"> Busca por nombre o apellido</label>
             <input class="primero" type="text" placeholder="Busca por nombre o apellido">
         </div>
-        <div class="col-6">
-            <!--<label class="subtitulo">Fecha de nacimiento</label>
-            <input type="date" placeholder="24/01/1974-04/04/1980">-->
-            <mat-form-field appearance="fill">
-                <mat-label>Enter a date range</mat-label>
+        <div class="col-4">
+
+            <mat-form-field appearance="fill" style="margin-top: 18px;">
+                <mat-label>Fecha de nacimiento</mat-label>
                 <mat-date-range-input [rangePicker]="picker">
-                    <input matStartDate placeholder="Start date">
-                    <input matEndDate placeholder="End date">
+                    <input matStartDate placeholder="Fecha inicio">
+                    <input matEndDate placeholder="Fecha fin">
                 </mat-date-range-input>
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-date-range-picker #picker></mat-date-range-picker>
             </mat-form-field>
         </div>
-        <div class="col-3"></div>
     </div>
 
     <app-card></app-card>

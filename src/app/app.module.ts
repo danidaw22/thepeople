@@ -15,11 +15,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
       MenuComponent,
       HomeComponent,
@@ -28,7 +30,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
       CardComponent,
       PeopleComponent,
       NotFoundComponent,
-      UploadNewComponent
+      UploadNewComponent,
+      LoginComponent,
+      DashboardComponent
    ],
   imports: [
     BrowserModule,

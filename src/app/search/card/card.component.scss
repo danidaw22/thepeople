@@ -1,6 +1,7 @@
 .box-card {
     width: 950px;
     margin-top: 20px;
+    display: flow-root;
     .card-link {
         text-decoration: none;
         cursor: pointer;
@@ -12,10 +13,15 @@
         width: 300px;
         height: 342px;
         float: left;
-        .card-img-top {
-            width: 330px;
+        .box-img {
+            width: 286px;
             height: 228px;
             border-radius: 10px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            background-size: cover;
+            transition: all .3s ease;
         }
         .card-people-description {
             background-color: #fff;
@@ -43,6 +49,11 @@
                 padding-left: 15px;
                 padding-right: 15px;
                 line-height: 16.41px;
+            }
+        }
+        &:hover {
+            .box-img {
+                margin-top: -3px;
             }
         }
     }

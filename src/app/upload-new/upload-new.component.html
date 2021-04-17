@@ -1,3 +1,27 @@
-<p>
-  upload-new works!
-</p>
+<div class="container new-people bg-white p-4">
+    <form>
+        <div class="mb-3">
+            <label for="inputname" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="inputname" placeholder="Nombre de famoso">
+        </div>
+        <div class="mb-3">
+            <label for="inputprofesion" class="form-label">Profesion</label>
+            <input type="text" class="form-control" id="inputprofesion" placeholder="Creador de contenido">
+        </div>
+        <div class="mb-3">
+            <label for="fechanacimiento" class="form-label">Fecha de nacimiento</label>
+            <input type="date" class="form-control" id="fechanacimiento" placeholder="">
+        </div>
+        <div class="mb-3">
+            <label for="biografia" class="form-label">Biografia</label>
+            <textarea class="form-control" id="biografia" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Imagen </label>
+            <input class="form-control" type="file" id="formFile">
+        </div>
+        <div class="botton-finalizar">
+            <button type="button" class="btn btn-success btn-fin">Añadir</button>
+        </div>
+    </form>
+</div>

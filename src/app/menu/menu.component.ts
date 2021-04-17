@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
+
+  changeBackground = false;
 
   ngOnInit() {
+    this.router.events.subscribe( result => {
+      if(result instanceof NavigationEnd){
+        if(result.url == "/search"){
+          this.changeBackground = true
+        }else {
+          this.changeBackground = false
+        }
+      }
+    })
   }
 
+  login(){
+    this.router.navigate(["upload-new"])
+  }
+
+  addnew(){
+    this.router.navigate(["upload-new"])
+  }
 }

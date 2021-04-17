@@ -1,3 +1,5 @@
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
 import { UploadNewComponent } from './upload-new/upload-new.component';
 import { NotFoundComponent } from './NotFound/NotFound.component';
 import { PeopleComponent } from './people/people.component';
@@ -15,6 +17,10 @@ const routes: Routes = [
   { path: "404", component: NotFoundComponent },
   { path:"upload-new", component:UploadNewComponent},
   { path: "**", redirectTo: "/404" },
+  { path:"login", component: LoginComponent},
+  { path:"dashboard", component: DashboardComponent, children:[
+    { path:"", redirectTo:"home", pathMatch:"full"}
+  ]}
 ];
 
 @NgModule({

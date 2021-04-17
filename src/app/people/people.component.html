@@ -1,18 +1,25 @@
-<div class="container">
-    <div *ngFor="let item of people" class="box-people">
-        <h2>{{item.nombre}}</h2>
-        <img src="assets/images/{{item.image}}">
-        <div class="box-fecha">
-            <p class="cabecera">FECHA DE NACIMIENTO</p>
-            <p class="text-b">{{item.fecha}}</p>
+<div class="white-container">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div *ngFor="let item of people" class="box-people col-12 col-md-6">
+                <h2 class="title-famoso">{{item.name}}</h2>
+                <div class="box-img" [ngStyle]="{'background-image': 'url('+ item.photo + ')' }">
+
+                </div>
+                <div class="box-fecha">
+                    <p class="cabecera">FECHA DE NACIMIENTO</p>
+                    <p class="text-b">{{item.birthdate}}</p>
+                </div>
+                <div class="box-profesion">
+                    <p class="cabecera">PROFESIÓN</p>
+                    <p class="text-b">{{item.job}}</p>
+                </div>
+                <div class="box-bio">
+                    <p class="cabecera">BIO</p>
+                    <p class="text-b">{{item.bio}}</p>
+                </div>
+            </div>
         </div>
-        <div class="box-profesion">
-            <p class="cabecera">PROFESIÓN</p>
-            <p class="text-b">{{item.categoria}}</p>
-        </div>
-        <div class="box-bio">
-            <p class="cabecera">BIO</p>
-            <p class="text-b">{{item.bio}}</p>
-        </div>
+
     </div>
 </div>
