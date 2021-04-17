@@ -1,25 +1,29 @@
 <div class="white-container">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div *ngFor="let item of people" class="box-people col-12 col-md-6">
-                <h2 class="title-famoso">{{item.name}}</h2>
-                <div class="box-img" [ngStyle]="{'background-image': 'url('+ item.photo + ')' }">
 
-                </div>
-                <div class="box-fecha">
-                    <p class="cabecera">FECHA DE NACIMIENTO</p>
-                    <p class="text-b">{{item.birthdate}}</p>
-                </div>
-                <div class="box-profesion">
-                    <p class="cabecera">PROFESIÓN</p>
-                    <p class="text-b">{{item.job}}</p>
-                </div>
-                <div class="box-bio">
-                    <p class="cabecera">BIO</p>
-                    <p class="text-b">{{item.bio}}</p>
-                </div>
+    <div class="container">
+        <div class="row justify-content-center firtsbox">
+            <div class="col-12 col-lg-5 main-box">
+                <h2 class="title-famoso">{{ people[0].name}}</h2>
+                <img class="box-img" src="{{ people[0].photo}}" alt="">
             </div>
         </div>
+    </div>
 
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-5 secondbox">
+
+            <p class="cabecera">Fecha de nacimiento</p>
+            <p class="text-b">{{ people[0].birthdate}}</p>
+
+            <p class="cabecera">Profesión</p>
+            <p class="text-b">{{ people[0].job}}</p>
+
+            <p class="cabecera">Bio</p>
+            <p class="text-b">{{ people[0].bio}}</p>
+
+        </div>
     </div>
 </div>
