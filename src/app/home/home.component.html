@@ -7,7 +7,7 @@
     </div>
 
     <div id="botonBusqueda" class="input-group mb-3">
-        <input type="text" class="form-control mibuscador" placeholder="Busqueda por nombre o apellido" aria-label="Busqueda por nombre o apellido" aria-describedby="button-addon2">
-        <button (click)="navigateToSearch()" class="btn btn-warning btn-busqueda" type="button"><img src="assets/images/search.svg"></button>
+        <input type="text" class="form-control mibuscador" placeholder="Busqueda por nombre o apellido" aria-label="Busqueda por nombre o apellido" aria-describedby="button-addon2" #nombre>
+        <button (click)="navigateToSearch(this.nombre.value)" class="btn btn-warning btn-busqueda" type="button"><img src="assets/images/search.svg"></button>
     </div>
 </div>

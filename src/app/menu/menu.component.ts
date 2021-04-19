@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe( result => {
       if(result instanceof NavigationEnd){
-        if(result.url == "/search"){
+        if(result.url == "/search" || result.url == "/detail"){
           this.changeBackground = true
         }else {
           this.changeBackground = false

@@ -3,15 +3,15 @@
 
         <div class="col-12 col-sm-6 col-lg-4">
             <label class="subtitulo"> Busca por nombre o apellido</label>
-            <input class="primero" type="text" placeholder="Busca por nombre o apellido">
+            <input class="primero" type="text" placeholder="Busca por nombre o apellido" [(ngModel)]="name" #nombre value="{{name}}" (keyup)="changeName()">
         </div>
         <div class="col-12 col-sm-6 col-lg-4">
 
             <mat-form-field appearance="fill" style="margin-top: 18px;">
                 <mat-label>Fecha de nacimiento</mat-label>
                 <mat-date-range-input [rangePicker]="picker">
-                    <input matStartDate placeholder="Fecha inicio">
-                    <input matEndDate placeholder="Fecha fin">
+                    <input matStartDate placeholder="Fecha inicio" [(ngModel)]="dateStart" (dateChange)="changeDateStart()">
+                    <input matEndDate placeholder="Fecha fin" [(ngModel)]="dateEnd" (dateChange)="changeDateEnd()">
                 </mat-date-range-input>
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-date-range-picker #picker></mat-date-range-picker>
