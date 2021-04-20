@@ -41,6 +41,6 @@ export class MenuComponent implements OnInit {
   }
 
   addnew(){
-    this.router.navigate(["upload-new"])
+    this.router.navigate(["dashboard/detail"])
   }
 }

@@ -1,3 +1,29 @@
-<p>
-  detail-people works!
-</p>
+<div class="container detail-person bg-white p-4">
+    <h2 *ngIf="editPerson" class="tittle">Editar Persona</h2>
+    <h2 *ngIf="!editPerson" class="tittle">Añadir Persona</h2>
+    <form [formGroup]="detailForm" (ngSubmit)="saveData()">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="formName" formControlName="name" placeholder="Nombre de famoso">
+            <label for="formName">Nombre</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="formJob" formControlName="job" placeholder="Creador de contenido">
+            <label for="formJob">Profesion</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="date" class="form-control" id="formDate" formControlName="birthdate" placeholder="">
+            <label for="formDate">Fecha nacimiento</label>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" id="formBio" formControlName="bio" rows="5"></textarea>
+            <label for="formBio">Biografia</label>
+        </div>
+        <div class="mb-3">
+            <input class="form-control" type="file" id="formPhoto" formControlName="photo">
+            <label for="formPhoto">Imagen</label>
+        </div>
+        <div class="botton-finalizar d-grid">
+            <button type="submit" class="btn btn-success btn-fin">Editar</button>
+        </div>
+    </form>
+</div>

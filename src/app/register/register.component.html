@@ -5,11 +5,15 @@
             <hr>
             <form [formGroup]="sForm" (ngSubmit)="saveData()">
                 <div class="mb-3">
+                    <label for="name" class="form-label">Contraseña</label>
+                    <input type="text" class="form-control" placeholder="Nombre" formControlName="name">
+                </div>
+                <div class="mb-3">
                     <label for="inputname" class="form-label">Email</label>
                     <input type="email" class="form-control" placeholder="Email" formControlName="email" [ngClass]="{'is-invalid': f.email.errors}">
                 </div>
                 <div class="mb-3">
-                    <label for="inputprofesion" class="form-label">Contraseña</label>
+                    <label for="password" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" placeholder="Password" formControlName="password">
                 </div>
                 <div class="botton-finalizar">

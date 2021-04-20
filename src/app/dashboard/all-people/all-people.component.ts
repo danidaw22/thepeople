@@ -122,17 +122,20 @@ export class AllPeopleComponent implements OnInit {
 
   faEdit = faEdit
 
+  personToDelete : Person | undefined
+
   editar(id : any){
     this.router.navigate(['/editar'], { queryParams: { id:id}})
     //this.router.navigate(['/editar/'+id])
   }
 
-  delete(id:any){
-
+  delete(persona : Person){
+    console.log("Eliminar a ", persona.name)
+    this.personToDelete = persona
   }
 
   addPeople(){
-    this.router.navigate(["upload-new"])
+    this.router.navigate(["dashboard/detail"])
   }
 
 

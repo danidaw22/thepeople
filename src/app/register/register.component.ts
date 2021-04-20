@@ -12,7 +12,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
     this.sForm = this.fb.group({
-      password:['dani', [Validators.required, Validators.minLength(2)]],
+      name:['',Validators.required, Validators.minLength(2)],
+      password:['', [Validators.required, Validators.minLength(2)]],
       email:['', Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]
     })
    }
