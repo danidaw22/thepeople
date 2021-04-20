@@ -1,3 +1,6 @@
+import { EditarPeopleComponent } from './dashboard/editar-people/editar-people.component';
+import { DetailPeopleComponent } from './dashboard/detail-people/detail-people.component';
+import { AllPeopleComponent } from './dashboard/all-people/all-people.component';
 import { UploadNewComponent } from './upload-new/upload-new.component';
 import { NotFoundComponent } from './NotFound/NotFound.component';
 import { CardComponent } from './search/card/card.component';
@@ -17,7 +20,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,11 @@ import { FormsModule } from '@angular/forms';
       NotFoundComponent,
       UploadNewComponent,
       LoginComponent,
-      DashboardComponent
+      DashboardComponent,
+      RegisterComponent,
+      AllPeopleComponent,
+      DetailPeopleComponent,
+      EditarPeopleComponent
    ],
   imports: [
     BrowserModule,
@@ -40,7 +49,9 @@ import { FormsModule } from '@angular/forms';
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

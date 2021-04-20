@@ -1,0 +1,24 @@
+@import '../../../styles.scss';
+.box-allpeople {
+    margin-top: 40px;
+}
+
+.btn-add {
+    background-color: $colorAmarillo;
+    color: white;
+    &:hover {
+        background: white;
+        border: 2px solid $colorAmarillo;
+        color: black;
+    }
+}
+
+.btn-table {
+    margin: 2px;
+}
+
+h2.tittle {
+    font-weight: bold;
+    color: $colorAmarillo;
+    font-size: 32px;
+}

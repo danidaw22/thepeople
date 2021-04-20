@@ -1,0 +1,22 @@
+@import '../../styles.scss';
+.btn-add {
+    width: 100%;
+    background-color: $colorAmarillo;
+    color: white;
+    &:hover {
+        background-color: white;
+        border-color: $colorAmarillo;
+        color: black;
+    }
+}
+
+.text-tittle {
+    text-align: center;
+    color: $colorAmarillo;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.box-register {
+    margin-top: 40px;
+}

@@ -10,8 +10,8 @@
             <mat-form-field appearance="fill" style="margin-top: 18px;">
                 <mat-label>Fecha de nacimiento</mat-label>
                 <mat-date-range-input [rangePicker]="picker">
-                    <input matStartDate placeholder="Fecha inicio" [(ngModel)]="dateStart" (dateChange)="changeDateStart()">
-                    <input matEndDate placeholder="Fecha fin" [(ngModel)]="dateEnd" (dateChange)="changeDateEnd()">
+                    <input matStartDate placeholder="Fecha inicio" (dateChange)="changeDateStart($event)">
+                    <input matEndDate placeholder="Fecha fin" (dateChange)="changeDateEnd($event)">
                 </mat-date-range-input>
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-date-range-picker #picker></mat-date-range-picker>

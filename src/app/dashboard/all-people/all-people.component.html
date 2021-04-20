@@ -1,0 +1,38 @@
+<div class="container box-allpeople">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="tittle">Personas</h2>
+        </div>
+        <div class="col-6">
+            <button type="button" (click)="addPeople()" class="btn btn-add float-end">Añadir</button>
+        </div>
+        <div class="col-12">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let item of people; let i = index">
+                        <tr>
+                            <th scope="row">
+                                {{i+1}}
+                            </th>
+                            <td>
+                                {{item.name}}
+                            </td>
+                            <td>
+                                <button type="button" (click)=delete(item.id) class="btn btn-danger float-end btn-table"><fa-icon [icon]="faDelete"></fa-icon></button>
+                                <a [routerLink]="['/dashboard/editar/'+ item.id]"><button type="button" class="btn btn-success float-end btn-table"><fa-icon [icon]="faEdit"></fa-icon></button></a>
+                            </td>
+                        </tr>
+                    </ng-container>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
