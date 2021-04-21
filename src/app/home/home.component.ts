@@ -16,6 +16,5 @@ export class HomeComponent implements OnInit {
 
   navigateToSearch(name : any){
     this.router.navigate(['/search'], { queryParams: { search:name}})
-    console.log(name);
   }
 }

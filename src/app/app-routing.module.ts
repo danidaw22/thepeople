@@ -1,4 +1,3 @@
-import { EditarPeopleComponent } from './dashboard/editar-people/editar-people.component';
 import { RegisterComponent } from './register/register.component';
 import { DetailPeopleComponent } from './dashboard/detail-people/detail-people.component';
 import { AllPeopleComponent } from './dashboard/all-people/all-people.component';

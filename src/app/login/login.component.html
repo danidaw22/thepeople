@@ -1,13 +1,20 @@
-<router-outlet>
-</router-outlet>
 <div class="login">
     <div class="login-triangle"></div>
 
     <h2 class="login-header">Log in</h2>
 
-    <form class="login-container">
-        <p><input type="email" placeholder="Email"></p>
-        <p><input type="password" placeholder="Password"></p>
+    <form class="login-container" [formGroup]="sForm" (ngSubmit)="login()">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="fname" placeholder="Email" formControlName="email" [ngClass]="{'is-invalid': f.email.errors}">
+            <label for="fname">Email</label>
+            <div class="invalid-feedback">
+                Nombre de email no valido
+            </div>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="fpassword" placeholder="password" formControlName="password" [ngClass]="{'is-invalid': f.password.errors}">
+            <label for="fpassword">Password</label>
+        </div>
         <p><input type="submit" value="Log in"></p>
         <a class="link" (click)="register()">No tienes cuenta</a>
     </form>

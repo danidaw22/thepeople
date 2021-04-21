@@ -1,4 +1,3 @@
-import { EditarPeopleComponent } from './dashboard/editar-people/editar-people.component';
 import { DetailPeopleComponent } from './dashboard/detail-people/detail-people.component';
 import { AllPeopleComponent } from './dashboard/all-people/all-people.component';
 import { UploadNewComponent } from './upload-new/upload-new.component';
@@ -23,6 +22,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from "../environments/environment";
+import {
+  AngularFireStorageModule,
+  AngularFireStorageReference,
+  AngularFireUploadTask,
+} from "@angular/fire/storage";
+import { NotifierModule } from 'angular-notifier';
 
 @NgModule({
   declarations: [
@@ -40,7 +47,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
       RegisterComponent,
       AllPeopleComponent,
       DetailPeopleComponent,
-      EditarPeopleComponent
    ],
   imports: [
     BrowserModule,
@@ -51,7 +57,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatFormFieldModule,
     FormsModule,
     FontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule,
+    AngularFireStorageModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig, "cloud"),
+    NotifierModule.withConfig({
+      // Custom options in here
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

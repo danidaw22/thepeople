@@ -3,27 +3,34 @@
     <h2 *ngIf="!editPerson" class="tittle">Añadir Persona</h2>
     <form [formGroup]="detailForm" (ngSubmit)="saveData()">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="formName" formControlName="name" placeholder="Nombre de famoso">
+            <input type="text" class="form-control" id="formName" formControlName="name" [ngClass]="{'is-invalid': f.name.errors && isSend}">
             <label for="formName">Nombre</label>
+            <div class="invalid-feedback ">
+                Nombre tiene que tener una longitud mayor a 2
+            </div>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="formJob" formControlName="job" placeholder="Creador de contenido">
-            <label for="formJob">Profesion</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="date" class="form-control" id="formDate" formControlName="birthdate" placeholder="">
-            <label for="formDate">Fecha nacimiento</label>
-        </div>
-        <div class="form-floating mb-3">
-            <textarea class="form-control" id="formBio" formControlName="bio" rows="5"></textarea>
-            <label for="formBio">Biografia</label>
+            <input type="text " class="form-control" id="formJob" formControlName="job" [ngClass]="{'is-invalid': f.job.errors && isSend}">
+            <label for="formJob ">Profesion</label>
+            <div class="invalid-feedback ">
+                Nombre tiene que tener una longitud mayor a 2
+            </div>
         </div>
         <div class="mb-3">
-            <input class="form-control" type="file" id="formPhoto" formControlName="photo">
+            <label for="formDate">Fecha nacimiento</label>
+            <input type="date" class="form-control" id="formDate" formControlName="birthdate">
+        </div>
+        <div class="mb-3">
+            <label for="formBio ">Biografia</label>
+            <textarea class="form-control " id="formBio" formControlName="bio" rows="5 "></textarea>
+        </div>
+        <div class="mb-3">
             <label for="formPhoto">Imagen</label>
+            <input class="form-control" type="file" id="formPhoto" formControlName="photo" #userPhoto (change)="onFileSelected($event)" name="image" autocomplete="off">
         </div>
         <div class="botton-finalizar d-grid">
-            <button type="submit" class="btn btn-success btn-fin">Editar</button>
+            <button *ngIf="editPerson" type="submit" class="btn btn-success btn-fin">Editar</button>
+            <button *ngIf="!editPerson" type="submit" class="btn btn-success btn-fin">Crear</button>
         </div>
     </form>
 </div>

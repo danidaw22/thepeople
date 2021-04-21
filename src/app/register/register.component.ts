@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,7 @@ export class RegisterComponent implements OnInit {
 
   sForm: FormGroup
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.sForm = this.fb.group({
       name:['',Validators.required, Validators.minLength(2)],
       password:['', [Validators.required, Validators.minLength(2)]],
@@ -37,4 +38,8 @@ export class RegisterComponent implements OnInit {
     console.log("He pulsado guardar", this.sForm)
   }
 
+
+  login(){
+    this.router.navigate(['/login'])
+  }
 }
